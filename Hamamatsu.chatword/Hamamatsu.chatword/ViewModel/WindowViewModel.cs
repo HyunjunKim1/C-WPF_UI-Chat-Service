@@ -61,7 +61,7 @@ namespace Hamamatsu.chatword.ViewModel
         {
             get
             {
-                return mWindow.WindowState == WindowState.Maximized ? 0 : mOuterMarginSize;
+                return Borderless ? 0 : mOuterMarginSize;
             }
             set
             {
