@@ -51,6 +51,8 @@ namespace Hamamatsu.chatword
     /// </summary>
     public class HasTextProperty : BaseAttachedProperty<HasTextProperty, bool>
     {
+
+
         /// <summary>
         ///호출자<see cref = "PasswordBox"/> 에 텍스트가 있는지 여부에 따라 HasText 속성을 설정함
         /// </summary>

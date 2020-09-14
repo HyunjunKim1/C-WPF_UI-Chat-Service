@@ -1,4 +1,4 @@
-﻿<Page x:Class="Hamamatsu.chatword.LoginPage"
+﻿<local:BasePage x:Class="Hamamatsu.chatword.LoginPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -37,7 +37,7 @@
                             <!-- Password -->
                             <PasswordBox Tag="Password" Margin="0 0 0 30"/>
                             <!-- Next button -->
-                            <Button Content="Next" HorizontalAlignment="Center" />
+                            <Button Content="Next" Click="Button_Click" HorizontalAlignment="Center" />
 
                         </StackPanel>
 
@@ -47,4 +47,4 @@
             </ScrollViewer>
         </Grid>
     </Border>
-</Page>
+</local:BasePage>
