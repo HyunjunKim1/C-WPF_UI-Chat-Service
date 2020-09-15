@@ -6,7 +6,7 @@ using System.Windows.Input;
 namespace Hamamatsu.chatword.ViewModel
 {
     /// <summary>
-    /// 커스텀 flat window를 위한 뷰 모델 <<
+    /// 커스텀 flat window를 위한 뷰 모델 << 얘가 메인뷰모델임 
     /// </summary>
     public class WindowViewModel : BaseViewModel
     {
@@ -33,12 +33,10 @@ namespace Hamamatsu.chatword.ViewModel
         private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
         #endregion
 
-
-
         #region public Properties
         //윈도우창이 가장 작은 크기를 정해줌
-        public double WindowMinimumWidth { get; set; } = 400;
-        public double WindowMinimumHeight { get; set; } = 400;
+        public double WindowMinimumWidth { get; set; } = 800;
+        public double WindowMinimumHeight { get; set; } = 500;
 
         public bool Borderless { get { return (mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked); } }
        
@@ -103,7 +101,7 @@ namespace Hamamatsu.chatword.ViewModel
         /// <summary>
         /// 채팅앱의 현재 페이지 알려주는 getset
         /// </summary>
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Chat;
 
         #endregion
 

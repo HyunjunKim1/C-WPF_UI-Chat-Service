@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace Hamamatsu.chatword.ValueConverters
+namespace Hamamatsu.chatword
 {
     /// <summary>
     /// 직접 XAML 사용을 허용하는 기본 값 변환기

@@ -9,5 +9,10 @@
         /// 페이지들의 이니셜임
         /// </summary>
         Login = 0,
+
+        /// <summary>
+        /// 메인 채팅 페이지
+        /// </summary>
+        Chat = 1,
     }
 }

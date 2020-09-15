@@ -4,7 +4,8 @@
 
     <FontFamily x:Key="GmarketSansTTFLight">pack://application;,,,/Fonts/#GmarketSansTTFLight</FontFamily>
     <FontFamily x:Key="GmarketSansTTFBold">pack://application;,,,/Fonts/#GmarketSansTTFBold</FontFamily>
-   
+    <FontFamily x:Key="fa-spinner">pack://application;,,,/Fonts/#fa-spinner</FontFamily>
+
 
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="{StaticResource GmarketSansTTFLight}"/>

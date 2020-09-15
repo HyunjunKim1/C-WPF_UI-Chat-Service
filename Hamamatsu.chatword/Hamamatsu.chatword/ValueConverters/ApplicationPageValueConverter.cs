@@ -1,4 +1,4 @@
-﻿using Hamamatsu.chatword.ValueConverters;
+﻿using Hamamatsu.chatword;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -14,6 +14,9 @@ namespace Hamamatsu.chatword
             {
                 case ApplicationPage.Login:
                     return new LoginPage();
+
+                case ApplicationPage.Chat:
+                    return new ChatPage();
 
                 default:
                     Debugger.Break();

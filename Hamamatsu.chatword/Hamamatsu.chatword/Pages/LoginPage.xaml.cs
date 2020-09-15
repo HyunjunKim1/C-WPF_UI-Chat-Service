@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Hamamatsu.chatword.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,16 +20,16 @@ namespace Hamamatsu.chatword
     /// <summary>
     /// LoginPage.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class LoginPage : BasePage
+    public partial class LoginPage : BasePage<LoginViewModel>, IHavePassword
     {
         public LoginPage()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.AnimateOut();
-        }
+        /// <summary>
+        /// 이 로그인 페이지를 위한 보안이 적용된 암호
+        /// </summary>
+        public SecureString SecurePassword  => PasswordText.SecurePassword;
     }
 }
