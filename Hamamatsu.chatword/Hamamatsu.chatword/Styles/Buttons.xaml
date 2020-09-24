@@ -203,16 +203,18 @@
                     <Border x:Name="border" 
                             BorderBrush="{TemplateBinding BorderBrush}" 
                             BorderThickness="{TemplateBinding BorderThickness}" 
-                            Background="{TemplateBinding Background}" 
+                             Background="{TemplateBinding Background}" 
                             SnapsToDevicePixels="True">
                         <Grid>
-                            <TextBlock Text="{TemplateBinding Content}" 
+                            <Viewbox>
+                                <TextBlock Text="{TemplateBinding Content}" 
                                    Focusable="False"
                                    FontFamily="{TemplateBinding FontFamily}"
                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
                                    Margin="{TemplateBinding Padding}" 
                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Viewbox>
                         </Grid>
 
                     </Border>

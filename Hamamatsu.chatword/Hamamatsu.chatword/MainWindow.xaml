@@ -139,32 +139,9 @@
 
         <Frame Grid.Column="1" x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
 
-        <!-- 메인 배경색 -->
-        <Border >
-            <!-- Contents -->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <!-- Top Menu -->
-                <Grid Height="50" Background="GhostWhite">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <!-- Main buttons -->
-                    <StackPanel Orientation="Horizontal">
-                        <Button Style="{StaticResource IconButton}" Content="X"/>
-                        <Button Style="{StaticResource IconButton}" Content="X"/>
-                        <Button Style="{StaticResource IconButton}" Content="X"/>
-                    </StackPanel>
-                </Grid>
-            </Grid>
-        </Border>
+        <!-- 왼쪽 사이드 메뉴-->
+        <local:SideMenuControl>
+        </local:SideMenuControl>
 
     </Grid>
 </Window>

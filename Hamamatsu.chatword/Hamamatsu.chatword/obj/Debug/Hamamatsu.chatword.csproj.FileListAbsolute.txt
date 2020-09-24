@@ -35,3 +35,5 @@ C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chat
 C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Pages\ChatPage.baml
 C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Pages\LoginPage.baml
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Controls\SideMenuControl.g.cs
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Controls\SideMenuControl.baml

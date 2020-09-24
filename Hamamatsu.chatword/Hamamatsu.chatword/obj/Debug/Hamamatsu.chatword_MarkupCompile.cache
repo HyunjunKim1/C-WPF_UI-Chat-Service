@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\App.xaml
-8-252206044
+91011499680
 
-27-275499042
+281744857970
 171649609067
-MainWindow.xaml;Pages\ChatPage.xaml;Pages\LoginPage.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatPage.xaml;Pages\LoginPage.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
 False
 
