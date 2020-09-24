@@ -1,22 +1,29 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Hamamatsu.chatword.ViewModel
+namespace Hamamatsu.chatword
 {
     /// <summary>
-    /// 액션을 실행하는 기본명령
+    /// A basic command that runs an Action
     /// </summary>
-    public class RelayCommand :ICommand
+    /// <summary>
+    /// A basic command that runs an Action
+    /// </summary>
+    public class RelayCommand : ICommand
     {
         #region Private Members
 
+        /// <summary>
+        /// The action to run
+        /// </summary>
         private Action mAction;
 
         #endregion
 
         #region Public Events
+
         /// <summary>
-        /// The event thats fired when the <see cref="cref=CanExecute(object)"/> value has changed
+        /// The event thats fired when the <see cref="CanExecute(object)"/> value has changed
         /// </summary>
         public event EventHandler CanExecuteChanged = (sender, e) => { };
 
@@ -27,7 +34,6 @@ namespace Hamamatsu.chatword.ViewModel
         /// <summary>
         /// Default constructor
         /// </summary>
-        /// <param name="action"></param>
         public RelayCommand(Action action)
         {
             mAction = action;
@@ -38,7 +44,7 @@ namespace Hamamatsu.chatword.ViewModel
         #region Command Methods
 
         /// <summary>
-        /// 항상 실행할수 있는 릴레이 명령
+        /// A relay command can always execute
         /// </summary>
         /// <param name="parameter"></param>
         /// <returns></returns>
@@ -48,7 +54,6 @@ namespace Hamamatsu.chatword.ViewModel
         }
 
         /// <summary>
-        /// 
         /// Executes the commands Action
         /// </summary>
         /// <param name="parameter"></param>

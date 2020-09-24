@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\김현준\source\repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\
 Hamamatsu.chatword
 none
 false
 DEBUG;TRACE
-C:\Users\김현준\source\repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\App.xaml
-61138005991
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\App.xaml
+8-252206044
 
-91013005533
-17481044926
-MainWindow.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+28106989194
+171649609067
+MainWindow.xaml;Pages\ChatPage.xaml;Pages\LoginPage.xaml;Styles\Windows.xaml;Styles\Texts.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
-True
+False
 

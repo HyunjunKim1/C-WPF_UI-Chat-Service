@@ -30,3 +30,8 @@ C:\Users\김현준\source\repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chat
 C:\Users\김현준\source\repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Styles\Fonts.baml
 C:\Users\김현준\source\repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Hamamatsu.chatword.csproj.Fody.CopyLocal.cache
 C:\Users\김현준\source\repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Hamamatsu.chatword.csproj.CopyComplete
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Pages\ChatPage.g.cs
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Pages\LoginPage.g.cs
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Pages\ChatPage.baml
+C:\Users\김현준\Source\Repos\HyunjunKim1\C-WPF_UI-Chat-Service\Hamamatsu.chatword\Hamamatsu.chatword\obj\Debug\Pages\LoginPage.baml

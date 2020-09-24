@@ -10,15 +10,161 @@
         x:Name="AppWindow"
         Icon="Images/Logo/Develop-logo.png"
         WindowStartupLocation="CenterScreen"
-        Title="Welcome, friend!" Height="600" Width="900">
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
+        Title="Welcome, Developer!" Height="600" Width="900">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!-- Outer border with the drop shadow margin-->
+                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}">
+
+                            <!-- Main window outline -->
+                            <Grid>
+                                <!-- 그리드 끝쪽 불투명도  -->
+                                <Border x:Name="Container" Background="{StaticResource BackgroundLightBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"/>
+                                <!-- 메인화면 그림자생기는거  -->
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"
+                                        Background="{Binding ForegroundLightBrush, FallbackValue=White}">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+
+                                <!-- The main window content -->
+                                <Grid>
+                                    <!-- 끝쪽 코너 둥글게하기 -->
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Grid.OpacityMask>
+
+                                    <Grid.RowDefinitions>
+
+                                        <!-- 타이틀 바 -->
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=42}"/>
+
+                                        <!-- 그림자 -->
+                                        <RowDefinition Height="Auto"/>
+
+                                        <!-- 창 컨텐트 -->
+                                        <RowDefinition Height="*"/>
+
+                                    </Grid.RowDefinitions>
+                                    <!-- 타이틀바 구성이랑 꾸며주는거 -->
+                                    <Grid  Grid.Column="0" Panel.ZIndex="1">
+                                        <Grid.ColumnDefinitions>
+                                            <!-- 아이콘 -->
+                                            <ColumnDefinition Width="Auto"/>
+                                            <!-- 제목 -->
+                                            <ColumnDefinition Width="*"/>
+                                            <!-- 윈도우버튼 -->
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- 윈도우 아이콘 -->
+                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                            <Image Source="/Images/Logo/Logom.png"/>
+                                        </Button>
+                                        <!-- 윈도우 제목 -->
+                                        <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+                                            <StackPanel>
+                                                <TextBlock FontWeight="Bold" FontSize="{StaticResource FontSizeRegular}" FontFamily="{StaticResource GmarketSansTTFLight}" Margin="0,0,0,-5">
+                                                    <Run Text="H" Foreground="Red"/><Run Text="A" Foreground="Red"/><Run Text="M" Foreground="Red"/><Run Text="A" Foreground="Red"/><Run Text="M" Foreground="Red"/><Run Text="A" Foreground="Red"/><Run Text="T" Foreground="Red"/><Run Text="S" Foreground="Red"/><Run Text="U" Foreground="Red"/>
+
+                                                </TextBlock>
+                                                <TextBlock Text="Photon is our Business" Foreground="black" TextAlignment="Center"/>
+
+                                            </StackPanel>
+                                        </Viewbox>
+
+                                        <!--윈도우창 버튼-->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Command="{Binding MinimizeCommand}" Style="{StaticResource WindowControlButton}" Content="_"/>
+                                            <Button Command="{Binding MaximizeCommand}" Style="{StaticResource WindowControlButton}" Content="[ ]"/>
+                                            <Button Command="{Binding CloseCommand}" Style="{StaticResource WindowCloseButton}" Content="X"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <!-- Drop shadow <- 타이틀창 밑에 생기는거임-->
+                                    <Border Grid.Row="1" Height="6" BorderThickness="0 0.2 0 0">
+                                        <!-- Underline -->
+                                        <Border.BorderBrush>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="0.0"/>
+                                                <GradientStop Color="{StaticResource ForegroundMain}" Offset="0.5"/>
+                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0"/>
+                                            </LinearGradientBrush>
+                                        </Border.BorderBrush>
+
+                                        <!-- Drop shadow -->
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="{StaticResource BackgroundVeryLight}" Offset="0.0"/>
+                                                <GradientStop Color="{StaticResource ForegroundLight}" Offset="1.0"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+
+                                    <!-- Page Content-->
+                                    <Border Grid.Row="2" Padding="{Binding InnerContentPadding}">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
     <WindowChrome.WindowChrome>
         <WindowChrome
-            ResizeBorderThickness="{Binding ResizeBorderthickness}"
+            ResizeBorderThickness="{Binding ResizeBorderThickness}" 
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="0"
+            GlassFrameThickness="0"
             />
     </WindowChrome.WindowChrome>
 
-    <Grid Background="Red">
-        
+    <Grid Background="{StaticResource ForegroundLightBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.Column="1" x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}"/>
+
+        <!-- 메인 배경색 -->
+        <Border >
+            <!-- Contents -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Top Menu -->
+                <Grid Height="50" Background="GhostWhite">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Main buttons -->
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource IconButton}" Content="X"/>
+                        <Button Style="{StaticResource IconButton}" Content="X"/>
+                        <Button Style="{StaticResource IconButton}" Content="X"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+
     </Grid>
 </Window>
